@@ -1,0 +1,56 @@
+.searchDiv{
+
+    background-color:#DADADA;
+    margin-top:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+.searchItem{
+
+    color:dodgerblue;
+   margin-bottom: 8px;
+    background-color: ghostwhite;
+    width:200px;
+  display: flex;
+  justify-content: center;
+  padding:10px;
+  
+
+}
+
+.searchItem1{
+
+    color:dodgerblue;
+    margin:2px;
+    background-color: ghostwhite;
+    width:400px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  padding:5px;
+
+}
+
+
+.inputBox{
+
+    width:400px;
+    margin:4px;
+    padding:10px;
+    border-radius:10px;
+    height:40px;
+    border:none;
+    padding:10px;
+    outline:none;
+
+}
+
+.searchbar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
