@@ -7,6 +7,8 @@ function Navbar() {
 
         <Link to="/" className="link" >Trending Stocks</Link>
         <Link to="/watchlists" className="link" >Watchlists</Link>
+        <Link to="/summary" className="link" >Summary</Link>
+        <Link to="/nifty-top_50" className="link" >Nifty Top 50</Link>
         
         </div>
     )

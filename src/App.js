@@ -13,6 +13,8 @@ import {BrowserRouter as Router ,Route, Switch} from 'react-router-dom';
 import Navbar from './Navbar';
 import Predict from './Predict';
 import ChartCrosshair from './ChartCrossHair';
+import Summary from './Summary';
+import Nifty from './Nifty';
 
 function App() {
   return (
@@ -44,9 +46,18 @@ function App() {
      <Watchlists/>
     
      </Route>
+
      <Route path="/stock-predict">
      <Predict/>
      <ChartCrosshair/>
+    
+     </Route>
+     <Route path="/summary">
+     <Summary/>
+    
+     </Route>
+     <Route path="/nifty-top_50">
+     <Nifty/>
     
      </Route>
     
