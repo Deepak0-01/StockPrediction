@@ -1,0 +1,48 @@
+.predict{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom:150px;
+     
+
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    
+   
+}
+
+.predict__form{
+    display:flex;
+    justify-content: space-evenly;
+    margin-top:100px;
+    width:100%;
+    
+
+}
+
+.ticker__input{
+    width:200px;
+    height:40px;
+    border-radius: 4px;
+    outline:none;
+    border:none;
+    padding:10px;
+    font-size:14px;
+
+}
+
+.fetch__button{
+
+    width:150px;
+    height:40px;
+    
+}
+
+.ticker__p{
+    font-size: 14px;
+    color:grey;
+    margin-bottom:2px;
+}
+

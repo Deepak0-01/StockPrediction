@@ -1,8 +1,76 @@
-import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-
+/*import { configureStore } from '@reduxjs/toolkit';
+import stockReducer from '../features/stockSlice';
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    stocks: stockReducer,
   },
+});*/
+
+import stockReducer from '../features/stockSlice';
+import tickerReducer from '../features/tickerSlice';
+
+import {createStore , combineReducers}  from 'redux';
+
+function saveToLocalStorage(state){
+
+
+  try{
+
+    const serializedState = JSON.stringify(state);
+    localStorage.setItem('state',serializedState)
+
+   
+
+  }catch(e){
+
+    console.log(e);
+
+
+
+
+  }
+}
+
+function loadFromLocalStorage(){
+
+try{
+  const serializedState = localStorage.getItem('state');
+  if(serializedState==null)
+  return undefined;
+
+  return JSON.parse(serializedState);
+
+}catch(e){
+  console.log(e);
+
+  return undefined;
+
+
+}
+
+
+}
+
+
+const persistedState = loadFromLocalStorage();
+
+const rootReducer =  combineReducers({
+ 
+
+  stocks: stockReducer,
+  ticker:tickerReducer,
+  
+  
 });
+
+
+export  const store = createStore(
+  rootReducer,
+  persistedState,
+)
+
+store.subscribe(()=>saveToLocalStorage(store.getState()))
+
+
+
+

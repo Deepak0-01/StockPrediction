@@ -6,6 +6,8 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {Link} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { pushTicker } from './features/tickerSlice';
 
 
 const bull = (
@@ -20,36 +22,38 @@ const bull = (
  
 function Cardbox({name,symbol,market,tzone,marketState}) {
 
+  
+
   console.log(name)
     return (
-        <Box sx={{ width: 325,maxHeight:300,margin:"4px",marginBottom:"20px"
+        <Box sx={{ width: 390,maxHeight:300,margin:"6px",marginBottom:"20px"
         }}>
-      <Card style={{backgroundImage:"linear-gradient(to bottom right, #91CEFE , #AB60D7)"}} variant="outlined">
+      <Card style={{backgroundImage:"linear-gradient(315deg, #0cbaba 0%, #380036 74%)"}} variant="outlined">
 
       <React.Fragment>
       <CardContent>
-        <Typography sx={{ fontSize: 24 }} color="text.primary" gutterBottom>
+        <Typography sx={{ fontSize: 24 }} color="white" gutterBottom>
        {name}
         </Typography>
-        <Typography variant="h5" component="div"  color="text.secondary">
+        <Typography variant="h5" component="div" color="white">
          {symbol}
         </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        <Typography sx={{ mb: 1.5 }} color="white">
        {market}
         </Typography>
-        <Typography variant="body2">
+        <Typography variant="body2"  color="gray">
        {tzone}
           <br />
         
         </Typography>
-        <Typography variant="body2">
+        <Typography variant="body2"  color="gray">
         {marketState}
         <br />
       
       </Typography>
       </CardContent>
       <CardActions>
-        <Link to="/stock-predict"><Button style={{color:"white"}} size="medium">Visualize and Predict</Button></Link>
+        <Link to="/"><Button className="visualize__button" style={{color:"white",backgroundColor:"#53552c",borderRadius:"4px", marginLeft:"2px"}} size="medium">Visualize and Predict</Button></Link>
       </CardActions>
     </React.Fragment>
       
@@ -60,6 +64,8 @@ function Cardbox({name,symbol,market,tzone,marketState}) {
 }
 
 export default Cardbox
+
+
 
 
 

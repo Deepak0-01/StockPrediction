@@ -1,9 +1,13 @@
 import React,{useState,useEffect} from 'react'
+import { useSelector } from 'react-redux';
+import { selectStock } from './features/stockSlice';
 import NiftyCard from './NiftyCard';
 
 function Nifty() {
 
     const [nifty, setNifty] = useState([]);
+
+   
    
 
     useEffect(()=>{
@@ -29,6 +33,9 @@ function Nifty() {
 
 
     },[])
+
+   
+
     return (
         <div>
 
