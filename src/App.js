@@ -17,6 +17,8 @@ import Summary from './Summary';
 import Nifty from './Nifty';
 import PredictionPage from './prediction/PredictionPage';
 import StockLineChart from './prediction/StockLineChart';
+import TweeterSentiment from './Sentiment/TweeterSentiment';
+import Feedback1 from './Sentiment/Feedback1';
 
 function App() {
   return (
@@ -75,6 +77,12 @@ function App() {
 
     
      </Route>
+
+     <Route path="/sentiment">
+    <Feedback1/>
+   
+       
+        </Route>
     
      
   

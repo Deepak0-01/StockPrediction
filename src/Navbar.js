@@ -10,6 +10,7 @@ function Navbar() {
         <Link to="/summary" className="link" >Summary</Link>
         <Link to="/nifty-top_50" className="link" >Nifty Top 50</Link>
         <Link to="/predict" className="link" >Predict Stock</Link>
+        <Link to="/sentiment" className="link" >Analyse Sentiments</Link>
         
         </div>
     )
